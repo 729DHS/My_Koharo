@@ -48,9 +48,17 @@ math: true
 - 边沿选择: CCxP/CCxNP 选择上升/下降/双边沿；双边沿测频时需注意计数翻倍。
 
 常用公式
-- 计数时钟 $f_{cnt} = \dfrac{f_{tim}}{PSC+1}$
-- 更新频率 $f_{update} = \dfrac{f_{cnt}}{ARR+1}$
-- PWM 频率 $f_{pwm} = \dfrac{f_{tim}}{(PSC+1)(ARR+1)}$
+$$
+f_{cnt} = \frac{f_{tim}}{PSC+1}
+$$
+
+$$
+f_{update} = \frac{f_{cnt}}{ARR+1}
+$$
+
+$$
+f_{pwm} = \frac{f_{tim}}{(PSC+1)(ARR+1)}
+$$
 
 实用小贴士
 - 修改 PSC/ARR/CCR 后若开预装载，需等待一次更新事件才生效，可手动 UG 产生。
