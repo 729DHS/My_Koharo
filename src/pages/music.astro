@@ -1,0 +1,16 @@
+---
+import BgmPlaylistConsole from '@components/bgm/BgmPlaylistConsole';
+import PageLayout from '@layouts/PageLayout.astro';
+
+const frontmatter = {
+  title: '歌单',
+  description: '背景音乐控制台',
+  comments: false,
+};
+---
+
+<PageLayout frontmatter={frontmatter}>
+  <div class="not-prose">
+    <BgmPlaylistConsole client:only="react" />
+  </div>
+</PageLayout>

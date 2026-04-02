@@ -1,0 +1,221 @@
+---
+import HomeSider from '@components/layout/HomeSider.astro';
+import Cover from '@components/ui/cover/Cover.astro';
+import { CONTENT_PADDING } from '@constants/layout';
+import { siteConfig } from '@constants/site-config';
+import TwoColumnLayout from '@layouts/TwoColumnLayout.astro';
+import { getPostSlug, getSortedPosts } from '@lib/content';
+import { displayDate } from '@lib/date';
+import { encodeSlug } from '@lib/route';
+import { getLocaleFromUrl, localizedPath, t } from '@/i18n';
+import Layout from '../layouts/Layout.astro';
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const posts = await getSortedPosts(locale);
+
+// 按年份对文章进行分组
+const postsByYear = posts.reduce(
+  (acc, post) => {
+    const year = new Date(post.data.date).getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(post);
+    return acc;
+  },
+  {} as Record<number, typeof posts>,
+);
+
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+// 按月份分组（YYYY-MM）
+const postsByMonth = posts.reduce(
+  (acc, post) => {
+    const d = new Date(post.data.date);
+    const monthKey = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+    if (!acc[monthKey]) {
+      acc[monthKey] = [];
+    }
+    acc[monthKey].push(post);
+    return acc;
+  },
+  {} as Record<string, typeof posts>,
+);
+
+const months = Object.keys(postsByMonth).sort((a, b) => b.localeCompare(a));
+
+// 按天分组（YYYY-MM-DD）
+const postsByDay = posts.reduce(
+  (acc, post) => {
+    const d = new Date(post.data.date);
+    const dayKey = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (!acc[dayKey]) {
+      acc[dayKey] = [];
+    }
+    acc[dayKey].push(post);
+    return acc;
+  },
+  {} as Record<string, typeof posts>,
+);
+
+const days = Object.keys(postsByDay).sort((a, b) => b.localeCompare(a));
+---
+
+<Layout title={`${t(locale, 'archives.title')} | ${siteConfig.title}`} description={t(locale, 'archives.title')}>
+  <TwoColumnLayout>
+    <Cover slot="cover" title={t(locale, 'archives.title')} />
+    <HomeSider slot="sider" />
+    <div class={`shadow-box bg-gradient-start mx-0 flex w-full flex-col ${CONTENT_PADDING.standard}`}>
+      <h2 class="shoka-decoration-circle group relative h-19 px-6 py-5 text-2xl/9 font-bold md:text-xl/9">
+        <a href={localizedPath('/', locale)} class="dashed-border text-muted-foreground group-hover:border-blue group-hover:text-blue border-b">{t(locale, 'nav.home')}</a>
+        <span class="text-muted-foreground text-lg md:text-base"> / </span>
+        {t(locale, 'post.totalPosts', { count: posts.length })}
+      </h2>
+      <div class="mb-4 flex flex-wrap items-center gap-2 px-6">
+        <button
+          type="button"
+          data-archive-view-btn
+          data-view="year"
+          class="archive-view-btn bg-primary/10 text-primary rounded-full px-3 py-1 text-sm font-medium transition-colors"
+        >
+          年视图
+        </button>
+        <button
+          type="button"
+          data-archive-view-btn
+          data-view="month"
+          class="archive-view-btn text-muted-foreground hover:bg-primary/10 rounded-full px-3 py-1 text-sm font-medium transition-colors"
+        >
+          月视图
+        </button>
+        <button
+          type="button"
+          data-archive-view-btn
+          data-view="day"
+          class="archive-view-btn text-muted-foreground hover:bg-primary/10 rounded-full px-3 py-1 text-sm font-medium transition-colors"
+        >
+          日视图
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 md:gap-5">
+        <div data-archive-view-panel="year" class="archive-view-panel flex flex-col gap-4 md:gap-5">
+          {
+            years.map((year) => (
+              <div>
+                <h3 class="text-xl font-bold md:text-base">
+                  {year}
+                  <span class="text-muted-foreground ml-2 text-base md:text-sm">{t(locale, 'post.yearPosts', { count: postsByYear[Number(year)].length })}</span>
+                </h3>
+                <div class="mt-2">
+                  {postsByYear[Number(year)].map((post) => (
+                    <p class="shoka-decoration-circle group text-primary hover:text-blue relative px-6 py-2 text-base/9 md:flex md:flex-col md:items-stretch md:text-sm/9">
+                      <span class="text-muted-foreground mr-2 text-xs">
+                        {displayDate.date(post.data.date)}
+                      </span>
+                      <a
+                        href={localizedPath(`/post/${encodeSlug(getPostSlug(post))}`, locale)}
+                        class="dashed-border text-primary hover:text-blue truncate transition-colors"
+                      >
+                        {post.data.title}
+                      </a>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div data-archive-view-panel="month" class="archive-view-panel hidden flex-col gap-4 md:gap-5">
+          {
+            months.map((month) => (
+              <div>
+                <h3 class="text-xl font-bold md:text-base">
+                  {month}
+                  <span class="text-muted-foreground ml-2 text-base md:text-sm">{postsByMonth[month].length} 篇</span>
+                </h3>
+                <div class="mt-2">
+                  {postsByMonth[month].map((post) => (
+                    <p class="shoka-decoration-circle group text-primary hover:text-blue relative px-6 py-2 text-base/9 md:flex md:flex-col md:items-stretch md:text-sm/9">
+                      <span class="text-muted-foreground mr-2 text-xs">
+                        {displayDate.date(post.data.date)}
+                      </span>
+                      <a
+                        href={localizedPath(`/post/${encodeSlug(getPostSlug(post))}`, locale)}
+                        class="dashed-border text-primary hover:text-blue truncate transition-colors"
+                      >
+                        {post.data.title}
+                      </a>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div data-archive-view-panel="day" class="archive-view-panel hidden flex-col gap-4 md:gap-5">
+          {
+            days.map((day) => (
+              <div>
+                <h3 class="text-xl font-bold md:text-base">
+                  {day}
+                  <span class="text-muted-foreground ml-2 text-base md:text-sm">{postsByDay[day].length} 篇</span>
+                </h3>
+                <div class="mt-2">
+                  {postsByDay[day].map((post) => (
+                    <p class="shoka-decoration-circle group text-primary hover:text-blue relative px-6 py-2 text-base/9 md:flex md:flex-col md:items-stretch md:text-sm/9">
+                      <span class="text-muted-foreground mr-2 text-xs">
+                        {displayDate.date(post.data.date)}
+                      </span>
+                      <a
+                        href={localizedPath(`/post/${encodeSlug(getPostSlug(post))}`, locale)}
+                        class="dashed-border text-primary hover:text-blue truncate transition-colors"
+                      >
+                        {post.data.title}
+                      </a>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </TwoColumnLayout>
+</Layout>
+
+<script>
+  function setupArchiveViewToggle() {
+    const root = document;
+    const buttons = Array.from(root.querySelectorAll('[data-archive-view-btn]'));
+    const panels = Array.from(root.querySelectorAll('[data-archive-view-panel]'));
+    if (!buttons.length || !panels.length) return;
+
+    function setView(view: string) {
+      panels.forEach((panel) => {
+        const panelView = panel.getAttribute('data-archive-view-panel');
+        panel.classList.toggle('hidden', panelView !== view);
+      });
+      buttons.forEach((btn) => {
+        const isActive = btn.getAttribute('data-view') === view;
+        btn.classList.toggle('bg-primary/10', isActive);
+        btn.classList.toggle('text-primary', isActive);
+        btn.classList.toggle('text-muted-foreground', !isActive);
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const view = btn.getAttribute('data-view');
+        if (view) setView(view);
+      });
+    });
+
+    setView('year');
+  }
+
+  if (document.readyState !== 'loading') setupArchiveViewToggle();
+  document.addEventListener('astro:page-load', setupArchiveViewToggle);
+</script>

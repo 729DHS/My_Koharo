@@ -1,0 +1,100 @@
+---
+import { buildTagPath } from '@lib/content/tags';
+import { localizedPath } from '@/i18n';
+
+interface TagCloudItem {
+  tag: string;
+  count: number;
+}
+
+interface Props {
+  tags: TagCloudItem[];
+  locale?: string;
+  heading?: string;
+}
+
+const { tags, locale, heading = '词云' } = Astro.props as Props;
+
+if (!tags.length) {
+  return null;
+}
+
+const sortedTags = [...tags].sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+
+const counts = sortedTags.map((item) => item.count);
+const minCount = Math.min(...counts);
+const maxCount = Math.max(...counts);
+
+const getRatio = (count: number) => {
+  if (maxCount === minCount) return 0.5;
+  return (count - minCount) / (maxCount - minCount);
+};
+
+const getFontSize = (count: number) => {
+  const ratio = getRatio(count);
+  return (0.8 + ratio * 1.25).toFixed(2);
+};
+
+const getOpacity = (count: number) => {
+  const ratio = getRatio(count);
+  return (0.65 + ratio * 0.35).toFixed(2);
+};
+
+const getRingData = (index: number) => {
+  if (index === 0) {
+    return { ring: 0, posInRing: 0, ringSize: 1 };
+  }
+
+  let remaining = index;
+  let ring = 1;
+  while (remaining > 6 * ring) {
+    remaining -= 6 * ring;
+    ring++;
+  }
+  return { ring, posInRing: remaining - 1, ringSize: 6 * ring };
+};
+
+const maxRing = (() => {
+  if (sortedTags.length <= 1) return 0;
+  return getRingData(sortedTags.length - 1).ring;
+})();
+
+const getPositionStyle = (index: number, count: number) => {
+  if (index === 0) {
+    return 'left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;';
+  }
+
+  const { ring, posInRing, ringSize } = getRingData(index);
+  const ringStep = maxRing > 0 ? 42 / maxRing : 0;
+  const radius = ring * ringStep;
+  const angleDeg = (360 / ringSize) * posInRing + (ring % 2 === 0 ? 12 : 0);
+  const angle = (angleDeg * Math.PI) / 180;
+
+  const x = 50 + radius * Math.cos(angle);
+  const y = 50 + radius * Math.sin(angle);
+  const z = 20 - ring;
+
+  return `left:${x.toFixed(2)}%;top:${y.toFixed(2)}%;transform:translate(-50%,-50%);z-index:${Math.max(1, z)};`;
+};
+---
+
+<section class="mx-4 mt-6 rounded-2xl border border-white/20 bg-white/5 px-4 py-4 backdrop-blur-sm md:mx-0">
+  <h2 class="mb-1 px-6 py-5 font-bold text-muted-foreground text-2xl/9 md:px-6 md:text-xl/9">
+    {heading}
+  </h2>
+  <div class="relative h-[28rem] overflow-hidden rounded-xl bg-gradient-to-br from-white/5 via-transparent to-white/10 md:h-[22rem]">
+    {
+      sortedTags.map(({ tag, count }, index) => (
+        <a
+          href={localizedPath(buildTagPath(tag), locale)}
+          class="text-primary hover:text-blue absolute inline-flex items-baseline gap-1 whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5"
+          style={`${getPositionStyle(index, count)}font-size:${getFontSize(count)}rem;opacity:${getOpacity(count)};line-height:1;`}
+          aria-label={`${tag} (${count})`}
+        >
+          <span class="font-semibold">{tag}</span>
+          <span class="text-[0.72em] opacity-75">{count}</span>
+        </a>
+      ))
+    }
+  </div>
+</section>
