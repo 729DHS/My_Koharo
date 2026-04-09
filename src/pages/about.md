@@ -8,133 +8,105 @@ description: "关于我？"
 
 ## 你好，这里是 729DHS
 
-- 河北工业大学 仪器类 本科在读
+河北工业大学 测控技术与仪器 本科在读
 
-我主要关注嵌入式系统、机器人与工程仿真，也在持续完善科研计算与工程开发工具链。
+我主要关注 **嵌入式系统、机器人与工程仿真**，也在持续完善科研计算与工程开发工具链。
 
-## 技能地图
+---
 
-```infographic
-infographic list-grid-badge-card
-data
-	title 编程语言
-	desc 以工程开发与科研计算为核心
-	items
-		- label C/C++
-			desc 嵌入式底层开发与性能敏感模块
-			icon mdi/language-cpp
-		- label Python
-			desc 数据处理、自动化脚本与原型验证
-			icon mdi/language-python
-		- label Rust
-			desc 系统编程与高可靠工具开发
-			icon mdi/language-rust
-		- label R
-			desc 统计分析与科研数据建模
-			icon mdi/chart-box
-		- label LaTeX
-			desc 论文排版与技术文档输出
-			icon mdi/file-document-edit
-```
+## 基本信息
 
-```infographic
-infographic list-grid-candy-card-lite
-data
-	title 嵌入式与硬件
-	desc 软硬协同设计与原型实现
-	items
-		- label STM32
-			desc 驱动开发、外设联调、实时控制
-			icon mdi/chip
-		- label ESP32
-			desc 物联网连接、边缘控制与无线通信
-			icon mdi/wifi-cog
-		- label Linux
-			desc 开发环境、部署调试与系统工具链
-			icon mdi/linux
-		- label 电路设计
-			desc 原理图与 PCB 设计、硬件调试
-			icon mdi/circuit-board
-```
+- **邮箱**: guo_114@outlook.com
+- **GitHub**: [github.com/729DHS](https://github.com/729DHS)
+- **个人网站**: [729dhs.site](https://www.729dhs.site/)
 
-```infographic
-infographic chart-bar-plain-text
-data
-	title 技能重心
-	items
-		- label 嵌入式开发
-			value 90
-		- label 硬件与电路设计
-			value 88
-		- label Python 工程化
-			value 82
-		- label Linux 工具链
-			value 80
-		- label 科研计算与文档
-			value 78
-```
+---
 
-## 工具栈
+## 教育经历
 
-```infographic
-infographic list-grid-badge-card
-data
-	title 开发与编辑器
-	items
-		- label VS Code
-			desc 主力开发环境与调试工作流
-			icon mdi/microsoft-visual-studio-code
-		- label Zed
-			desc 轻量快速编辑与多项目切换
-			icon mdi/code-braces-box
-		- label MATLAB
-			desc 数值计算、控制与算法验证
-			icon mdi/calculator-variant
-```
+**河北工业大学** · 测控技术与仪器 本科
 
-```infographic
-infographic list-grid-badge-card
-data
-	title EDA / CAD / 仿真工具
-	desc 电子设计、机械设计与机器人仿真
-	items
-		- label Altium Designer
-			desc 原理图与 PCB 设计
-			icon mdi/cpu-64-bit
-		- label Cadence Allegro
-			desc 高速 PCB 设计与布线
-			icon mdi/memory
-		- label SolidWorks
-			desc 机械结构建模与装配
-			icon mdi/cube-outline
-		- label UG (NX)
-			desc 工业设计与制造流程支持
-			icon mdi/vector-square
-		- label AutoCAD
-			desc 工程制图与二维三维建模
-			icon mdi/ruler-square-compass
-		- label Ansys
-			desc 多物理场仿真与分析
-			icon mdi/chart-timeline-variant
-		- label MuJoCo
-			desc 机器人动力学仿真
-			icon mdi/robot-industrial
-		- label V-REP / CoppeliaSim
-			desc 机器人场景建模与控制验证
-			icon mdi/robot
-		- label Webots
-			desc 机器人仿真与算法测试
-			icon mdi/robot-happy-outline
-```
+**核心课程**: 嵌入式系统 | 模拟/数字电路 | 控制工程 | 精密机械设计 | PLC | 误差分析
 
-## 方向
+**辅修**: 复杂装备数字孪生(数字信号处理 | 机器视觉 | 三维建模)
 
-- 嵌入式系统与机器人控制
-- 软硬件协同设计
-- 工程仿真与自动化工具开发
-- 科研计算与技术写作
+**计算机技术**: 数据结构与算法 | 操作系统 | 计算机组成原理 | Linux 内核设计
 
+---
 
-## 自评
+## 核心技能
 
-> 喜欢探索新技术,挑战新问题
+**嵌入式系统开发**  
+熟练 C/C++，了解 ARM 汇编；具备数据结构与算法基础，熟悉模块化设计与代码架构
+
+**Linux 嵌入式系统**  
+熟悉 Linux 系统架构与调试工具，了解设备树与 U-Boot 启动流程
+
+**MCU 与 RTOS**  
+STM32 开发经验；FreeRTOS / RT-Thread 任务调度以及国产 32 移植；SPI / I2C / UART / CAN 外设驱动
+
+**硬件设计**  
+熟悉 Altium Designer, Cadence Allegro 等 PCB 设计软件，具备电路原理图绘制、多层 PCB Layout、信号完整性分析及仿真能力
+
+**嵌入式平台部署与调试**  
+RV1103/i.MX6ULL 调试；熟悉 GCC 交叉编译、Makefile、Git、GDB、Bootloader 与设备树配置
+
+**机械设计**  
+熟练使用 SolidWorks, UG, CAD 等设计软件，熟悉常用机械设计规范与标准
+
+**仿真分析**  
+熟练掌握 ANSYS, SolidWorks, UG 等结构力学仿真及运动仿真，具备结构运动仿真能力
+
+**电气控制及 PLC**  
+熟悉西门子/三菱 PLC，熟悉机电一体化和电气控制原理，有智能视觉码垛机器人实操调试经验
+
+**其他技能**  
+熟悉 Python、Matplotlib、R 等
+
+---
+
+## 项目与实践经历
+
+### 油菜处理清洗打包机
+**2026.02 -- 至今**
+
+- 机械创新设计大赛蔬菜处理赛道，实现油菜去根去黄叶初处理及打包包装
+- 负责整机嵌入式控制与电气架构设计：双 RV1103 + STM32F4 视觉终端协同控制系统
+- 设计六路步进电机驱动控制板，支持多电机同步控制，最大承载电流>15A
+- 实现 FreeRTOS 多任务管理框架，同时控制 15 路步进电机、6 路气缸、四个串口通信
+- 基于 RV1103 开发嵌入式 AI 视觉终端，实现坏叶/黄叶检测，集成 OpenCV-Mobile + RKNN YOLOv5
+- 负责打包机构设计，使用气缸+虹膜切割机构实现自动打包
+
+### 三自由度并联 Delta 机械臂
+**2025.07 -- 2026.02**
+
+- 基于 STM32F407 + RT-Thread 实时操作系统，实现三自由度 Delta 机械臂运动控制
+- 进行插值算法优化实现末端运动轨迹平滑控制
+- 使用 Python + Webots + ROS2 构建数字孪生平台，实现运动可视化与仿真验证
+- 负责机械结构设计，采用三悬臂自支撑架构，通过运动学分析与有限元仿真优化
+- 基于 SolidWorks 三维建模与装配，利用 ANSYS 完成静力学与模态分析
+- 进行 MATLAB 运动学建模仿真与控制算法开发
+
+### 自主导航四旋翼无人机结构设计及优化
+**2025.03 -- 2025.04**
+
+- 嵌入式芯片与系统设计竞赛 RDK 赛道，实现自主规划导航、SLAM 建图、热成像人员搜索
+- 使用 PX4 数据分析飞机震动特性，针对螺丝震动松动问题进行优化
+- 负责设计并优化无人机机架及浆保设计，使用碳纤维双层结构实现轻量化、高强度
+- 使用 SolidWorks 建模 + ANSYS 仿真进行拓扑结构优化，提高结构强度
+- 进行 Fluent 仿真验证优化设计的空气动力学性能
+
+### 智能视觉码垛机器人
+**2025.07 -- 至今**
+
+- 数字孪生课程设计作业，使用海康威视摄像头 + 三轴笛卡尔机械臂，智能检测物体并码垛
+- 使用 UG 设计机械结构并进行运动仿真，实现数据实时回传与可视化双向通信
+- 实现视觉目标检测算法，使用 MVD 进行图像处理与目标识别
+
+### 串联机构轮足底盘开发
+**2025.09 -- 2026.01**
+
+- 基于 C++23 与 FreeRTOS，在 STM32F407 平台构建轮腿机器人控制系统
+- 实现 1kHz 无锁并发控制，使用"ISR 无锁队列"和"双缓冲"机制，调度抖动控制在 10μs 内
+- 实现 VMC+LQR 串联腿控制算法，进行 DSP 优化以降低控制任务处理时间
+- 设计共轴双 FOC 电机的双腿轮足串联控制机械架构

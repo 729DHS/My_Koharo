@@ -13,7 +13,7 @@ export const uiStrings = {
   'nav.tags': '标签',
   'nav.archives': '归档',
   'nav.friends': '友链',
-  'nav.about': '关于',
+  'nav.about': '关于我',
   'nav.music': '歌单',
   'nav.weekly': '周刊',
   'nav.bangumi': '追番',

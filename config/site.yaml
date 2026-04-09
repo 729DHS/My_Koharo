@@ -401,7 +401,7 @@ navigation:
     nameKey: nav.friends
     path: /friends
     icon: ri:links-line
-  - name: 关于
+  - name: 关于我
     nameKey: nav.about
     path: /about
     icon: fa6-regular:circle-user
