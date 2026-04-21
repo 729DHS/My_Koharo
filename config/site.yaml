@@ -234,6 +234,12 @@ friends:
       desc: MATH
       image: https://blog.cosine.ren/img/avatar.webp
       color: '#ed788b'
+    - site: hdochub
+      url: https://blog.hdochub.com/
+      owner: hdochub
+      desc: 李工的blog
+      image: /img/hdochub.jpg
+      color: '#191717'
     # - site: 示例博客 A
     #   url: https://example-a.com
     #   owner: Alice
