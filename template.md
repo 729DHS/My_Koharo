@@ -188,6 +188,17 @@ https://codepen.io/botteu/pen/YPKBrJX/
 
 ![示例封面图](/img/cover/3.webp)
 
+
+
+当需要插入位于 `public/img/Note/Example/demo.png` 的图片时：
+
+![图片描述](/img/Note/Example/demo.png)
+
+> **注意**：
+> 1. 路径必须以 [/](file://c:\APPS\COPRO\Blog\Astro\My_Koharo\GETTING-STARTED.md) 开头。
+> 2. 路径对应 `public/` 目录下的文件位置。
+> 3. 确保文件名大小写与实际文件一致。
+
 ## 8. Shoka 文本语法
 
 ### 下划线 / 高亮 / 上下标
