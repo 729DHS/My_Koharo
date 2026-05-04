@@ -3,12 +3,10 @@ title: 轮腿机器人二自由度闭式连杆机构正逆运动学推导
 link: 2dof-linkage-forward-inverse-kinematics
 date: 2026-05-04 14:00:00
 description: 轮腿机器人腿部 2-DOF 双平行四边形连杆机构的正逆运动学解析推导，以及 Python 数值实现。机构最终等价于标准 2R 机械臂。
-cover: /img/cover/robot-arm.jpg
 tags:
-  - 机器人
-  - 运动学
+  - robot 
+  - kinematics
   - Python
-  - 机械设计
 categories:
   - [笔记, 机器人]
 sticky: false
