@@ -124,8 +124,25 @@ export default {
         '5.5xl': '3.5rem',
       },
       fontFamily: {
-        sans: ['Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Noto Sans CJK SC', 'Noto Sans', 'Arial', 'sans-serif'],
-        'chill-round': ['Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Noto Sans CJK SC', 'Arial', 'sans-serif'],
+        sans: [
+          'Segoe UI',
+          'PingFang SC',
+          'Hiragino Sans GB',
+          'Microsoft YaHei UI',
+          'Noto Sans CJK SC',
+          'Noto Sans',
+          'Arial',
+          'sans-serif',
+        ],
+        'chill-round': [
+          'Segoe UI',
+          'PingFang SC',
+          'Hiragino Sans GB',
+          'Microsoft YaHei UI',
+          'Noto Sans CJK SC',
+          'Arial',
+          'sans-serif',
+        ],
       },
       clipPath: {
         'post-img-left': 'polygon(0 0,92% 0%,100% 100%,0% 100%)',

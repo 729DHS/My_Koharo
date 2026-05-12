@@ -194,6 +194,21 @@ if (post.data.description) {
           <span>{t(locale, 'post.fallbackNotice', { lang: getLocaleLabel(locale) })}</span>
         </div>
       )}
+      <!-- Google Search Console Indexing Request Link -->
+      <div class="flex items-center gap-2 rounded-lg border border-blue-500/20 bg-blue-500/5 px-4 py-2 text-xs text-blue-600 dark:text-blue-400">
+        <Icon name="ri:google-fill" class="h-3.5 w-3.5 shrink-0" />
+        <span>
+          Google 未收录此页面？
+          <a
+            href={`https://search.google.com/search-console/inspect?resource_id=sc%3A729dhs.site`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline underline-offset-2 hover:text-blue-800 dark:hover:text-blue-300"
+          >
+            在 Search Console 中请求编入索引
+          </a>
+        </span>
+      </div>
       {
         !post.data.password && summaryText && summarySource && (
           <SummaryPanel client:visible summary={summaryText} source={summarySource} className="mt-2" />
