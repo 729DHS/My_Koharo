@@ -1,0 +1,30 @@
+# Auto-detect text files and normalize line endings to LF on checkin
+* text=auto
+
+# Explicitly mark these as text (LF normalized)
+*.css text
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.astro text eol=lf
+*.mjs text eol=lf
+*.json text
+*.md text
+*.yaml text
+*.yml text
+*.xml text
+*.svg text
+
+# Binary files - never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.zip binary
+*.gz binary
