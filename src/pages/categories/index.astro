@@ -13,7 +13,7 @@ const { categories, countMap } = await getCategoryList(locale);
 const links = getCategoryLinks(categories, '');
 ---
 
-<Layout title={`${t(locale, 'category.allCategories')} | ${seoConfig.title}`}>
+<Layout title={`${t(locale, 'category.allCategories')} | ${seoConfig.title}`} description={t(locale, 'seo.categoryIndex.description')}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'category.allCategories')} />
     <HomeSider slot="sider" />

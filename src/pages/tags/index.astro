@@ -4,7 +4,7 @@ import TagCloud from '@components/tag/TagCloud.astro';
 import { TagItem } from '@components/tag/TagItem';
 import Cover from '@components/ui/cover/Cover.astro';
 import { CONTENT_PADDING } from '@constants/layout';
-import { siteConfig } from '@constants/site-config';
+import { seoConfig } from '@constants/site-config';
 import Layout from '@layouts/Layout.astro';
 import TwoColumnLayout from '@layouts/TwoColumnLayout.astro';
 import { getAllTags, getSortedPosts } from '@lib/content';
@@ -18,7 +18,7 @@ const sortedTags = Object.entries(tags)
   .map(([tag, count], index) => ({ tag, count, colorIndex: index % 4 }));
 ---
 
-<Layout title={`${t(locale, 'tag.allTags')} | ${siteConfig.title}`} description={t(locale, 'tag.allTags')}>
+<Layout title={`${t(locale, 'tag.allTags')} | ${seoConfig.title}`} description={t(locale, 'seo.tagsIndex.description')}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'tag.allTags')} />
     <HomeSider slot="sider" />

@@ -91,8 +91,14 @@ export function parseDateInSiteTimezone(dateString: string): Date {
     throw new Error('Date string cannot be empty');
   }
 
+  // Normalize Chinese date format: "2026年5月14日 00:05:13" → "2026-05-14 00:05:13"
+  const normalized = dateString.replace(
+    /(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/,
+    (_, y, m, d) => `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`,
+  );
+
   // toDate will parse strings without timezone offset as if they were in the specified timezone
-  const result = toDate(dateString, { timeZone: siteTimezone });
+  const result = toDate(normalized, { timeZone: siteTimezone });
 
   // Validate the parsed date
   if (Number.isNaN(result.getTime())) {

@@ -4,9 +4,9 @@ link: delta-robot-kinematics-library
 date: 2026-05-15 07:00:00
 description: 记录 Delta 并联机器人的运动学推导、MATLAB 验证和 C++ 库实现过程。静平台半径 115mm，驱动臂 125mm，从动臂 338mm，动平台直径 150mm。
 tags:
-  - 机器人
+  - robot
   - STM32
-  - 运动学
+  - kinematics
   - Delta
 categories:
   - [笔记, Kinematics]
@@ -31,12 +31,12 @@ categories:
 
 对每个支链，将问题转换到局部坐标系，简化为平面 2R 连杆逆运动学：
 
-```
+```plain
 x_local·sin(θ) - z_local·cos(θ) = (d² + L1² - L2²) / (2·L1)
 ```
 
 解为：
-```
+```plain
 θ = φ + π/2 + α
 ```
 其中 `φ = atan2(z_local, x_local)`，`α = acos((L1² + d² - L2²) / (2·L1·d))`。
@@ -68,9 +68,8 @@ x_local·sin(θ) - z_local·cos(θ) = (d² + L1² - L2²) / (2·L1)
 
 ## 代码组织
 
-库放在 `MCU/CUBEMX/F407_MX/deltarobot/`：
 
-```
+```plain
 deltarobot/
 ├── inc/
 │   ├── delta_common.h        → 向量、角度、工具

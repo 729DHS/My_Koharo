@@ -6,7 +6,7 @@ description: 轮腿机器人腿部 2-DOF 双平行四边形连杆机构的正逆
 tags:
   - robot 
   - kinematics
-  - Python
+  - Python  
 categories:
   - [笔记, 机器人]
 sticky: false
@@ -21,7 +21,7 @@ math: true
 
 与传统带传动或齿轮传动方案相比，这种全连杆机构具有 **零回程差、结构刚度高、无磨损件** 等优点，特别适合需要高精度末端位置控制的轮腿机器人应用。
 
-![轮腿实物图](/img/Note/Kinematics/p2.png)
+![轮腿实物图](/img/Note/Kinematics/p2.png)  
 ![仿真图](/img/Note/Kinematics/p1.png)
 
 ```mermaid

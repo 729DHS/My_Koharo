@@ -2,7 +2,7 @@
 import HomeSider from '@components/layout/HomeSider.astro';
 import Cover from '@components/ui/cover/Cover.astro';
 import { CONTENT_PADDING } from '@constants/layout';
-import { siteConfig } from '@constants/site-config';
+import { seoConfig } from '@constants/site-config';
 import Layout from '@layouts/Layout.astro';
 import TwoColumnLayout from '@layouts/TwoColumnLayout.astro';
 import { getPostLastCategory, getPostSlug, getSortedPosts, normalizeTag, translateCategoryName } from '@lib/content';
@@ -33,7 +33,7 @@ const allPosts = await getSortedPosts(locale);
 const posts = allPosts.filter((post) => post.data.tags?.some((tg) => normalizeTag(tg) === tag));
 ---
 
-<Layout title={`${t(locale, 'tag.postsWithTag', { name: tag })} | ${siteConfig.title}`} description={t(locale, 'tag.postsWithTag', { name: tag })}>
+<Layout title={`${t(locale, 'tag.postsWithTag', { name: tag })} | ${seoConfig.title}`} description={t(locale, 'tag.postsWithTag', { name: tag })}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'tag.postsWithTag', { name: tag })} />
     <HomeSider slot="sider" />

@@ -1,7 +1,7 @@
 ---
 title: STM32 库设计笔记2
 link: stm32-library-design2
-date: 2026年5月14日 00:05:13
+date: 2026-05-14 00:05:13
 description: STM32 驱动库面向对象程序设计,从硬编码到多态的演化之路
 tags:
   - STM32

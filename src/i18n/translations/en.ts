@@ -336,4 +336,12 @@ export const uiStrings: UIStrings = {
   'bangumi.noItems': 'No collections',
   'bangumi.error': 'Failed to load, please try again',
   'bangumi.retry': 'Retry',
+
+  // ── SEO ────────────────────────────────────────────
+  'seo.home.description':
+    'A blog about embedded systems, robotics, STM32 development, and Astro — notes and project walkthroughs.',
+  'seo.postsList.description': 'Browse page {page} — embedded systems, robotics, STM32 development notes and projects.',
+  'seo.categoryIndex.description': 'Browse all categories to find content on embedded development, robotics, STM32, and more.',
+  'seo.tagsIndex.description': 'Browse all tags to quickly find technical topics and related articles.',
+  'seo.archives.description': 'Browse all blog posts in chronological order, newest first.',
 };

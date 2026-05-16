@@ -2,7 +2,7 @@
 import HomeSider from '@components/layout/HomeSider.astro';
 import Cover from '@components/ui/cover/Cover.astro';
 import { CONTENT_PADDING } from '@constants/layout';
-import { siteConfig } from '@constants/site-config';
+import { seoConfig } from '@constants/site-config';
 import TwoColumnLayout from '@layouts/TwoColumnLayout.astro';
 import { getPostSlug, getSortedPosts } from '@lib/content';
 import { displayDate } from '@lib/date';
@@ -61,7 +61,7 @@ const postsByDay = posts.reduce(
 const days = Object.keys(postsByDay).sort((a, b) => b.localeCompare(a));
 ---
 
-<Layout title={`${t(locale, 'archives.title')} | ${siteConfig.title}`} description={t(locale, 'archives.title')}>
+<Layout title={`${t(locale, 'archives.title')} | ${seoConfig.title}`} description={t(locale, 'seo.archives.description')}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'archives.title')} />
     <HomeSider slot="sider" />

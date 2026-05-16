@@ -22,7 +22,7 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const postCardData = toPostCardDataList(page.data, locale);
 ---
 
-<Layout title={seoConfig.title}>
+<Layout title={seoConfig.title} description={t(locale, 'seo.postsList.description', { page: String(page.currentPage) })}>
   <TwoColumnLayout>
     <Cover slot="cover" />
     <HomeSider slot="sider" />

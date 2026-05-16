@@ -335,4 +335,11 @@ export const uiStrings = {
   'bangumi.noItems': '暂无收藏',
   'bangumi.error': '加载失败，请稍后重试',
   'bangumi.retry': '重试',
+
+  // ── SEO ────────────────────────────────────────────
+  'seo.home.description': '分享嵌入式系统、机器人技术、STM32 开发与 Astro 博客搭建的学习笔记与项目实践。',
+  'seo.postsList.description': '浏览第 {page} 页 — 嵌入式系统、机器人技术、STM32 开发笔记与项目分享。',
+  'seo.categoryIndex.description': '浏览全部分类，发现嵌入式开发、机器人技术、STM32 编程等精彩内容。',
+  'seo.tagsIndex.description': '浏览所有标签，快速找到感兴趣的技术主题和相关文章。',
+  'seo.archives.description': '按时间线浏览所有博客文章，从最新到最早。',
 } as const;
