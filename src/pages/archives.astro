@@ -61,7 +61,7 @@ const postsByDay = posts.reduce(
 const days = Object.keys(postsByDay).sort((a, b) => b.localeCompare(a));
 ---
 
-<Layout title={`${t(locale, 'archives.title')} | ${seoConfig.title}`} description={t(locale, 'seo.archives.description')}>
+<Layout title={`${t(locale, 'seo.archives.title')} | ${seoConfig.title}`} description={t(locale, 'seo.archives.description')}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'archives.title')} />
     <HomeSider slot="sider" />

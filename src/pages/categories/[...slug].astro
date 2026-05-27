@@ -34,7 +34,7 @@ const category = slug ? getCategoryByLink(allCategories, slug) : propCategory;
 const displayCategories = category ? [category] : allCategories;
 
 const pageDescription = category
-  ? `在「${translateCategoryName(category?.name ?? '', locale)}」分类下浏览相关技术文章`
+  ? t(locale, 'seo.categoryPage.description', { name: translateCategoryName(category?.name ?? '', locale) })
   : t(locale, 'seo.categoryIndex.description');
 ---
 

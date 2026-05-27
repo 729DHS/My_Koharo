@@ -213,6 +213,7 @@ export const seoConfig = {
   description: siteConfig.description,
   keywords: siteConfig?.keywords?.join(',') ?? '',
   url: siteConfig.site,
+  indexNowKey: yamlConfig.seo?.indexNowKey,
 };
 
 const BUILT_IN_COVERS = Array.from({ length: 32 }, (_, i) => `/img/cover/${i + 1}.webp`);

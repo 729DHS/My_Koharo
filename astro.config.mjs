@@ -189,7 +189,19 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        // 只收录：首页、博客文章、文章列表(第1页)、归档、关于
+        // 排除：404、深层分页、分类页、标签页等低质量页面
+        const path = page.replace(/\/+$/, '') || '/';
+        if (path === '/' || path === '/en') return true;
+        if (path === '/about' || path === '/en/about') return true;
+        if (path.startsWith('/post/') || path.startsWith('/en/post/')) return true;
+        if (path === '/posts' || path === '/en/posts') return true;
+        if (path === '/archives' || path === '/en/archives') return true;
+        return false;
+      },
+    }),
     icon({
       include: {
         gg: ['*'],

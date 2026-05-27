@@ -583,6 +583,7 @@ comment:
 #   host: 是否添加 Host 指令（可选，适用于 Yandex）
 # -----------------------------------------------------------------------------
 seo:
+  indexNowKey: 6e8f4b2c1a3d5f7e9b0c2d4a6f8e1b3c  # IndexNow API key for Bing/Yandex instant indexing
   robots:
     # policy:                          # 爬虫策略（可选，取消注释并配置）
     #   - userAgent: '*'

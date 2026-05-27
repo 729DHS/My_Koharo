@@ -71,6 +71,8 @@ export const uiStrings: UIStrings = {
 
   // ── Archives ────────────────────────────────────────────────
   'archives.title': 'Archives',
+  'seo.archives.title': 'Article Archives - Browse All Blog Posts by Date',
+  'seo.tags.title': 'Tag Directory - Browse All Technical Tags and Topics',
   'archives.totalPosts': '{count} posts',
 
   // ── Search ──────────────────────────────────────────────────
@@ -339,9 +341,15 @@ export const uiStrings: UIStrings = {
 
   // ── SEO ────────────────────────────────────────────
   'seo.home.description':
-    'A blog about embedded systems, robotics, STM32 development, and Astro — notes and project walkthroughs.',
-  'seo.postsList.description': 'Browse page {page} — embedded systems, robotics, STM32 development notes and projects.',
-  'seo.categoryIndex.description': 'Browse all categories to find content on embedded development, robotics, STM32, and more.',
-  'seo.tagsIndex.description': 'Browse all tags to quickly find technical topics and related articles.',
-  'seo.archives.description': 'Browse all blog posts in chronological order, newest first.',
+    'A blog about embedded systems, robotics, STM32 development, and Astro — notes and project walkthroughs. Covers FreeRTOS, SPI, GPIO, timers, and other MCU low-level drivers, plus Delta robot kinematics and mechanical design.',
+  'seo.postsList.description':
+    'Browse page {page} — embedded systems, robotics, STM32 development notes and projects. Topics include FreeRTOS real-time operating systems, peripheral driver development, and robot kinematics.',
+  'seo.categoryIndex.description':
+    'Browse all categories to find content on embedded development, robotics, STM32, and more. Categories span MCU low-level drivers, real-time operating systems, mechanical design, and blog development.',
+  'seo.tagsIndex.description':
+    'Browse all technical tags to quickly find topics and related articles. Covers STM32, FreeRTOS, SPI, GPIO, timers, PWM, Delta robots, kinematics, and many other technical subjects.',
+  'seo.archives.description':
+    'Browse all blog posts in chronological order, newest first. Topics include embedded systems development, STM32 peripheral drivers, FreeRTOS real-time operating systems, robot kinematics, and mechanical design.',
+  'seo.categoryPage.description':
+    'Browse all articles in the "{name}" category — covering embedded development, MCU low-level drivers, real-time operating systems, and robot control.',
 };

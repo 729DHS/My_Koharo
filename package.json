@@ -11,6 +11,8 @@
     "generate:summaries:force": "npx tsx src/scripts/generateSummaries.ts --force",
     "generate:all": "npm run generate:lqips && npm run generate:summaries && npm run generate:similarities",
     "build": "astro build",
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "build:prod": "astro build && node scripts/submit-indexnow.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",

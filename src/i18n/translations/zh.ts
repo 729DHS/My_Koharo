@@ -70,6 +70,8 @@ export const uiStrings = {
 
   // ── Archives ────────────────────────────────────────────────
   'archives.title': '归档',
+  'seo.archives.title': '文章归档 - 按时间线浏览全部博客',
+  'seo.tags.title': '标签列表 - 浏览全部技术标签与话题',
   'archives.totalPosts': '共 {count} 篇',
 
   // ── Search ──────────────────────────────────────────────────
@@ -337,9 +339,16 @@ export const uiStrings = {
   'bangumi.retry': '重试',
 
   // ── SEO ────────────────────────────────────────────
-  'seo.home.description': '分享嵌入式系统、机器人技术、STM32 开发与 Astro 博客搭建的学习笔记与项目实践。',
-  'seo.postsList.description': '浏览第 {page} 页 — 嵌入式系统、机器人技术、STM32 开发笔记与项目分享。',
-  'seo.categoryIndex.description': '浏览全部分类，发现嵌入式开发、机器人技术、STM32 编程等精彩内容。',
-  'seo.tagsIndex.description': '浏览所有标签，快速找到感兴趣的技术主题和相关文章。',
-  'seo.archives.description': '按时间线浏览所有博客文章，从最新到最早。',
+  'seo.home.description':
+    '分享嵌入式系统、机器人技术、STM32 开发与 Astro 博客搭建的学习笔记与项目实践。涵盖 FreeRTOS、SPI、GPIO、定时器等 MCU 底层驱动，以及 Delta 机器人运动学、机械设计等工程内容。',
+  'seo.postsList.description':
+    '浏览第 {page} 页 — 嵌入式系统、机器人技术、STM32 开发笔记与项目分享。涵盖 FreeRTOS 实时操作系统、外设驱动开发、机器人运动学与控制等内容。',
+  'seo.categoryIndex.description':
+    '浏览全部分类，发现嵌入式开发、机器人技术、STM32 编程等精彩内容。分类涵盖 MCU 底层驱动、实时操作系统、机械设计、博客搭建等多个技术领域。',
+  'seo.tagsIndex.description':
+    '浏览所有技术标签，快速找到感兴趣的主题和相关文章。涵盖 STM32、FreeRTOS、SPI、GPIO、定时器、PWM、Delta 机器人、运动学等多个技术话题。',
+  'seo.archives.description':
+    '按时间线浏览所有博客文章，从最新到最早。涵盖嵌入式系统开发、STM32 外设驱动、FreeRTOS 实时操作系统、机器人运动学与机械设计等工程实践笔记。',
+  'seo.categoryPage.description':
+    '在「{name}」分类下浏览所有相关技术文章与学习笔记，涵盖嵌入式开发、MCU 底层驱动、实时操作系统与机器人控制等工程实践内容。',
 } as const;

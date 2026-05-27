@@ -18,7 +18,7 @@ const sortedTags = Object.entries(tags)
   .map(([tag, count], index) => ({ tag, count, colorIndex: index % 4 }));
 ---
 
-<Layout title={`${t(locale, 'tag.allTags')} | ${seoConfig.title}`} description={t(locale, 'seo.tagsIndex.description')}>
+<Layout title={`${t(locale, 'seo.tags.title')} | ${seoConfig.title}`} description={t(locale, 'seo.tagsIndex.description')}>
   <TwoColumnLayout>
     <Cover slot="cover" title={t(locale, 'tag.allTags')} />
     <HomeSider slot="sider" />

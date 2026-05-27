@@ -463,6 +463,8 @@ export interface RobotsConfig {
 
 export interface SeoConfig {
   robots?: RobotsConfig;
+  /** IndexNow API key for instant URL submission to Bing/Yandex */
+  indexNowKey?: string;
 }
 
 // =============================================================================

@@ -3,7 +3,7 @@ layout: ../layouts/PageLayout.astro
 title: "About"
 coverTitle: "关于我"
 date: 2025-01-03 01:01:33
-description: "关于我？"
+description: "关于 729DHS — 河北工业大学测控技术与仪器专业本科在读，主要关注嵌入式系统、机器人技术、工程仿真与科研计算。欢迎通过邮箱或 GitHub 联系。"
 ---
 
 ## 你好，这里是 729DHS
