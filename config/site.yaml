@@ -15,7 +15,7 @@ site:
   alternate: 729DHS # 网站英文名称 用于页脚、Logo、@ handle 等
   subtitle: ヾ(≧▽≦*)o # 网站副标题
   name: 729DHS # 作者名称 - 请修改为你的名字
-  description: 分享嵌入式系统、机器人技术、STM32 开发与 Astro 博客搭建的学习笔记与项目实践 # 网站描述
+  description: 分享自己的单片机,Linux,机器人,RL学习笔记与项目实践 # 网站描述
   avatar: /img/avatar.webp # 网站头像
   showLogo: true # 是否显示 Logo
   author: 729DHS # 作者名称 - 请修改为你的名字

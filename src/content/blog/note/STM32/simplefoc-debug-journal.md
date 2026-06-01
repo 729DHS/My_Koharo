@@ -7,11 +7,6 @@ description: STM32F103 + SimpleFOC Mini + AS5600 构建位置伺服系统的完�
 tags:
   - STM32
   - FOC
-  - 电机控制
-  - PID
-  - 嵌入式
-  - 调试
-  - AS5600
 categories:
   - [笔记, STM32]
 ---
@@ -466,6 +461,4 @@ if (pid->integral > -pid->integral_limit &&
 
 ---
 
-> 完整源码：[GitHub - simpleFOC_1](https://github.com/729DHS/STM32_SimpleFOC)  
-> 调试日志原文：`docs/debugging-journal.md`  
-> MATLAB 量化噪声仿真：`analysis/pid_sim.m`
+> 完整源码：[GitHub - simpleFOC_1](https://github.com/729DHS/simplefoc_mini_STM32_demo)  

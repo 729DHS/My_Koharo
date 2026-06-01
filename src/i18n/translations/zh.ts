@@ -340,7 +340,7 @@ export const uiStrings = {
 
   // ── SEO ────────────────────────────────────────────
   'seo.home.description':
-    '分享嵌入式系统、机器人技术、STM32 开发与 Astro 博客搭建的学习笔记与项目实践。涵盖 FreeRTOS、SPI、GPIO、定时器等 MCU 底层驱动，以及 Delta 机器人运动学、机械设计等工程内容。',
+    '分享自己的单片机,Linux,机器人,RL学习笔记与项目实践。涵盖 FreeRTOS、SPI、GPIO、定时器等 MCU 底层驱动，以及 Delta 机器人,轮腿机器人,运动学、机械设计等工程内容。',
   'seo.postsList.description':
     '浏览第 {page} 页 — 嵌入式系统、机器人技术、STM32 开发笔记与项目分享。涵盖 FreeRTOS 实时操作系统、外设驱动开发、机器人运动学与控制等内容。',
   'seo.categoryIndex.description':
