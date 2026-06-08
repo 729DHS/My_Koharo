@@ -9,8 +9,7 @@ tags:
   - Embedded
   - Debug
 categories:
-  - 笔记
-  - STM32
+  - [笔记, STM32]
 ---
 
 # STM32N657X0H3Q Nucleo Development Board Debug Log
