@@ -191,15 +191,41 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) => {
-        // 只收录：首页、博客文章、文章列表(第1页)、归档、关于
+        // 只收录：首页、博客文章、文章列表(第1页)、归档、关于、weekly 第1页
         // 排除：404、深层分页、分类页、标签页等低质量页面
-        const path = page.replace(/\/+$/, '') || '/';
+        // 注意：page 是完整 URL（如 https://729dhs.site/post/slug/），需提取 pathname
+        const raw = page.startsWith('http') ? new URL(page).pathname : page;
+        const path = raw.replace(/\/+$/, '') || '/';
         if (path === '/' || path === '/en') return true;
         if (path === '/about' || path === '/en/about') return true;
-        if (path.startsWith('/post/') || path.startsWith('/en/post/')) return true;
-        if (path === '/posts' || path === '/en/posts') return true;
         if (path === '/archives' || path === '/en/archives') return true;
+        if (path === '/posts' || path === '/en/posts') return true;
+        // 精确匹配 /post/<slug> 和 /en/post/<slug>，排除 /posts/<N> 分页
+        if (/^\/post\/[^/]+$/.test(path) || /^\/en\/post\/[^/]+$/.test(path)) return true;
+        // weekly 系列首页
+        if (path === '/weekly' || path === '/en/weekly') return true;
         return false;
+      },
+      // 为重要页面设置 changefreq 和 priority
+      serialize: (item) => {
+        // item.url 可能是完整 URL 或路径，安全解析 pathname
+        let path;
+        try {
+          path = new URL(item.url).pathname;
+        } catch {
+          path = item.url;
+        }
+        const cleanPath = path.replace(/\/+$/, '') || '/';
+        // 首页 - 高优先级
+        if (cleanPath === '/' || cleanPath === '/en') {
+          return { ...item, changefreq: 'daily', priority: 1.0 };
+        }
+        // 博客文章 - 中等优先级
+        if (/^\/post\/[^/]+$/.test(cleanPath) || /^\/en\/post\/[^/]+$/.test(cleanPath)) {
+          return { ...item, changefreq: 'weekly', priority: 0.8 };
+        }
+        // 文章列表、归档、关于、weekly
+        return { ...item, changefreq: 'weekly', priority: 0.6 };
       },
     }),
     icon({
