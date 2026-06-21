@@ -137,7 +137,7 @@ $$
 \end{bmatrix}}
 $$
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 物理意义
@@ -309,7 +309,7 @@ def solve_inverse(P7_target, params, elbow=1):
 
 两圆相交的 $\pm$ 选择带来了 **四种装配模式**（branch_d × branch_f），对应实际机构的不同组装方式：
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 四种装配模式

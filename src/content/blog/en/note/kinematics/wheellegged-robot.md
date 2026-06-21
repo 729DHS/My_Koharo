@@ -137,7 +137,7 @@ $$
 \end{bmatrix}}
 $$
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Physical Meaning
@@ -309,7 +309,7 @@ The `elbow` parameter controls which inverse solution is returned: `+1` elbow up
 
 The $\pm$ choice in circle intersection brings **four assembly modes** (branch_d × branch_f), corresponding to different assembly methods of the actual mechanism:
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Four Assembly Modes

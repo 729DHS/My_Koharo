@@ -12,7 +12,7 @@ categories:
 # Rust in an Hour
 ## Delete Element
 The underscore is a special name - or rather, a "lack of name". It basically means to throw away something:_
-```Rust
+```rust
 // this does *nothing* because 42 is a constant
 let _ = 42;
 
@@ -22,7 +22,7 @@ let _ = get_thing();
 ---
 ## Tuples
 the format of tuples is "(a,b,c...)" , the most usage are similar to tuples in Python:
-```Rust
+```rust
 let pair = ('a', 17);
 pair.0; // this is 'a'
 pair.1; // this is 17

@@ -102,7 +102,7 @@ HAL 库更抽象，兼容性更好，而标准库更底层，效率更高但复�
   - 常见管脚：SWDIO `PA13`、SWCLK `PA14`；JTAG 仅用：`PA15 (JTDI)`、`PB3 (JTDO/SWO)`、`PB4 (NJTRST)`。
   - 释放后示例（适用于 F4/L4/H7，仅示意）：
 
-```C
+```c
 // 在早期初始化阶段，将 JTAG 仅用的管脚设为安全模式（输入）或目标模式
 GPIO_InitTypeDef GPIO_InitStruct = {0};
 __HAL_RCC_GPIOA_CLK_ENABLE();

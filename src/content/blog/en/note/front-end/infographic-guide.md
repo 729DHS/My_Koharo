@@ -33,7 +33,7 @@ In this blog, you can use the `infographic` directive directly in Markdown code 
 Use the `infographic` directive in a code block, specifying the template name on the first line, then defining data in a YAML-like syntax:
 
 ````markdown
-```infographic
+```text
 infographic <template-name>
 data
   title Title
@@ -53,7 +53,7 @@ Suitable for displaying information lists, feature lists, tech stacks, etc.
 
 Use the `list-grid-badge-card` template to display card-style lists:
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Frontend Tech Stack
@@ -83,7 +83,7 @@ data
 
 Use `list-grid-candy-card-lite` for a more interesting card style:
 
-```infographic
+```text
 infographic list-grid-candy-card-lite
 data
   title Blog Features
@@ -106,7 +106,7 @@ data
 
 Use `list-row-horizontal-icon-arrow` to display a linear list:
 
-```infographic
+```text
 infographic list-row-horizontal-icon-arrow
 data
   title Development Process
@@ -129,7 +129,7 @@ Suitable for displaying steps, processes, timelines, and other sequential inform
 
 Use `sequence-zigzag-steps-underline-text` to display process steps:
 
-```infographic
+```text
 infographic sequence-zigzag-steps-underline-text
 data
   title Blog Building Process
@@ -148,7 +148,7 @@ data
 
 Use `sequence-circular-simple` to display a circular process:
 
-```infographic
+```text
 infographic sequence-circular-simple
 data
   title PDCA Cycle
@@ -167,7 +167,7 @@ data
 
 Use `sequence-roadmap-vertical-simple` to display a timeline or roadmap:
 
-```infographic
+```text
 infographic sequence-roadmap-vertical-simple
 data
   title Project Milestones
@@ -186,7 +186,7 @@ data
 
 Use `sequence-pyramid-simple` to display hierarchical progression:
 
-```infographic
+```text
 infographic sequence-pyramid-simple
 data
   title Maslow's Hierarchy of Needs
@@ -213,7 +213,7 @@ Suitable for binary comparisons, pros and cons analysis, etc.
 
 Use `compare-binary-horizontal-simple-fold` for comparison:
 
-```infographic
+```text
 infographic compare-binary-horizontal-simple-fold
 data
   title SSR vs SSG
@@ -240,7 +240,7 @@ data
 
 Use `compare-swot` for SWOT analysis:
 
-```infographic
+```text
 infographic compare-swot
 data
   title Tech Blog SWOT Analysis
@@ -275,7 +275,7 @@ Suitable for displaying organizational structures, classification systems, and o
 
 Use `hierarchy-structure` to display multi-level architecture, perfect for showing system architecture and module layering:
 
-```infographic
+```text
 infographic hierarchy-structure
 data
   title System Layered Structure
@@ -340,7 +340,7 @@ data
 
 Use `hierarchy-tree-tech-style-capsule-item` to display hierarchical structure:
 
-```infographic
+```text
 infographic hierarchy-tree-tech-style-capsule-item
 data
   title Frontend Technology System
@@ -368,7 +368,7 @@ data
 
 Use `hierarchy-tree-curved-line-rounded-rect-node` to display hierarchy:
 
-```infographic
+```text
 infographic hierarchy-tree-curved-line-rounded-rect-node
 data
   title Blog Content Categories
@@ -397,7 +397,7 @@ Suitable for displaying statistical data and numeric comparisons.
 
 Use `chart-column-simple` to display data comparison:
 
-```infographic
+```text
 infographic chart-column-simple
 data
   title Monthly Article Publication Statistics
@@ -420,7 +420,7 @@ data
 
 Use `chart-bar-plain-text` to display horizontal comparison:
 
-```infographic
+```text
 infographic chart-bar-plain-text
 data
   title Programming Language Usage Ratio
@@ -441,7 +441,7 @@ data
 
 Use `chart-pie-plain-text` to display proportional distribution:
 
-```infographic
+```text
 infographic chart-pie-plain-text
 data
   title Traffic Source Distribution
@@ -460,7 +460,7 @@ data
 
 Use `chart-pie-donut-pill-badge` to create a donut chart:
 
-```infographic
+```text
 infographic chart-pie-donut-pill-badge
 data
   title Tech Stack Ratio
@@ -477,7 +477,7 @@ data
 
 Use `chart-line-plain-text` to display trends:
 
-```infographic
+```text
 infographic chart-line-plain-text
 data
   title Blog Traffic Trends
@@ -504,7 +504,7 @@ Suitable for displaying four-quadrant analysis and priority matrices.
 
 Use `quadrant-quarter-simple-card` for quadrant analysis:
 
-```infographic
+```text
 infographic quadrant-quarter-simple-card
 data
   title Four Quadrant Analysis
@@ -531,7 +531,7 @@ Suitable for displaying relationships between elements.
 
 Use `relation-circle-icon-badge` to display relationship networks:
 
-```infographic
+```text
 infographic relation-circle-circular-progress
 data
   title Subsidiary Profit Analysis
@@ -563,7 +563,7 @@ data
 
 You can customize the color scheme through the `theme` block:
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Custom Color Scheme Example

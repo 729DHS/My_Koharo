@@ -53,7 +53,7 @@ data
 
 使用 `list-grid-badge-card` 模板展示卡片式列表：
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 前端技术栈
@@ -83,7 +83,7 @@ data
 
 使用 `list-grid-candy-card-lite` 创建更有趣的卡片样式：
 
-```infographic
+```text
 infographic list-grid-candy-card-lite
 data
   title 博客特色功能
@@ -106,7 +106,7 @@ data
 
 使用 `list-row-horizontal-icon-arrow` 展示线性列表：
 
-```infographic
+```text
 infographic list-row-horizontal-icon-arrow
 data
   title 开发流程
@@ -129,7 +129,7 @@ data
 
 使用 `sequence-zigzag-steps-underline-text` 展示流程步骤：
 
-```infographic
+```text
 infographic sequence-zigzag-steps-underline-text
 data
   title 博客搭建流程
@@ -148,7 +148,7 @@ data
 
 使用 `sequence-circular-simple` 展示循环流程：
 
-```infographic
+```text
 infographic sequence-circular-simple
 data
   title PDCA 循环
@@ -167,7 +167,7 @@ data
 
 使用 `sequence-roadmap-vertical-simple` 展示时间线或路线图：
 
-```infographic
+```text
 infographic sequence-roadmap-vertical-simple
 data
   title 项目里程碑
@@ -186,7 +186,7 @@ data
 
 使用 `sequence-pyramid-simple` 展示层级递进关系：
 
-```infographic
+```text
 infographic sequence-pyramid-simple
 data
   title 马斯洛需求层次
@@ -213,7 +213,7 @@ theme
 
 使用 `compare-binary-horizontal-simple-fold` 进行对比：
 
-```infographic
+```text
 infographic compare-binary-horizontal-simple-fold
 data
   title SSR vs SSG
@@ -240,7 +240,7 @@ data
 
 使用 `compare-swot` 进行 SWOT 分析：
 
-```infographic
+```text
 infographic compare-swot
 data
   title 技术博客 SWOT 分析
@@ -275,7 +275,7 @@ data
 
 使用 `hierarchy-structure` 展示多层架构，非常适合展示系统架构、模块分层：
 
-```infographic
+```text
 infographic hierarchy-structure
 data
   title 系统分层结构
@@ -340,7 +340,7 @@ data
 
 使用 `hierarchy-tree-tech-style-capsule-item` 展示层级结构：
 
-```infographic
+```text
 infographic hierarchy-tree-tech-style-capsule-item
 data
   title 前端技术体系
@@ -368,7 +368,7 @@ data
 
 使用 `hierarchy-tree-curved-line-rounded-rect-node` 展示层级：
 
-```infographic
+```text
 infographic hierarchy-tree-curved-line-rounded-rect-node
 data
   title 博客内容分类
@@ -397,7 +397,7 @@ data
 
 使用 `chart-column-simple` 展示数据对比：
 
-```infographic
+```text
 infographic chart-column-simple
 data
   title 月度文章发布统计
@@ -420,7 +420,7 @@ data
 
 使用 `chart-bar-plain-text` 展示横向对比：
 
-```infographic
+```text
 infographic chart-bar-plain-text
 data
   title 编程语言使用占比
@@ -441,7 +441,7 @@ data
 
 使用 `chart-pie-plain-text` 展示占比分布：
 
-```infographic
+```text
 infographic chart-pie-plain-text
 data
   title 访问来源分布
@@ -460,7 +460,7 @@ data
 
 使用 `chart-pie-donut-pill-badge` 创建环形图：
 
-```infographic
+```text
 infographic chart-pie-donut-pill-badge
 data
   title 技术栈占比
@@ -477,7 +477,7 @@ data
 
 使用 `chart-line-plain-text` 展示趋势：
 
-```infographic
+```text
 infographic chart-line-plain-text
 data
   title 博客访问量趋势
@@ -504,7 +504,7 @@ data
 
 使用 `quadrant-quarter-simple-card` 进行象限分析：
 
-```infographic
+```text
 infographic quadrant-quarter-simple-card
 data
   title 四象限分析
@@ -531,7 +531,7 @@ data
 
 使用 `relation-circle-icon-badge` 展示关系网络：
 
-```infographic
+```text
 infographic relation-circle-circular-progress
 data
   title 子公司盈利分析
@@ -563,7 +563,7 @@ data
 
 可以通过 `theme` 块自定义颜色方案：
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 自定义配色示例

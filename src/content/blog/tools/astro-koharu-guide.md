@@ -1194,7 +1194,7 @@ flowchart LR
 使用方式：在代码块中使用 `infographic` 标记，第一行指定模板名称，然后使用类似 YAML 的语法定义数据：
 
 ````markdown
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 技术栈
@@ -1212,7 +1212,7 @@ data
 ```
 ````
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title 技术栈
@@ -1282,7 +1282,7 @@ data
 可以在数据后添加 `theme` 块自定义颜色：
 
 ````markdown
-```infographic
+```text
 infographic sequence-pyramid-simple
 data
   items

@@ -1194,7 +1194,7 @@ Supports using [@antv/infographic](https://infographic.antv.vision/) to draw bea
 Usage: Use the `infographic` directive in a code block, specify the template name on the first line, then define data in a YAML-like syntax:
 
 ````markdown
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Tech Stack
@@ -1212,7 +1212,7 @@ data
 ```
 ````
 
-```infographic
+```text
 infographic list-grid-badge-card
 data
   title Tech Stack
@@ -1282,7 +1282,7 @@ data
 You can add a `theme` block after data to customize colors:
 
 ````markdown
-```infographic
+```text
 infographic sequence-pyramid-simple
 data
   items

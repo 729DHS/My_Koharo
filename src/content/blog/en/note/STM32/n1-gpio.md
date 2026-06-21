@@ -103,7 +103,7 @@ The specific disable/remap methods may differ for different series chips. Please
   - Common pins: SWDIO `PA13`, SWCLK `PA14`; JTAG-only: `PA15 (JTDI)`, `PB3 (JTDO/SWO)`, `PB4 (NJTRST)`.
   - After release example (applicable to F4/L4/H7, for reference only):
 
-```C
+```c
 // In early initialization phase, set JTAG-only pins to safe mode (input) or target mode
 GPIO_InitTypeDef GPIO_InitStruct = {0};
 __HAL_RCC_GPIOA_CLK_ENABLE();
